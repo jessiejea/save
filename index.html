@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test Google Forms</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <div>
+                <strong>Test Google Form</strong>
+            </div>
+            <form id="form" target="_self" onsubmit="" action="">
+                <fieldset>
+                    <label>我是</label>
+                    <input id="user" type="radio" value="Amanda" name="user"> Amanda    
+                    <input id="user" type="radio" value="Lok" name="user">Lok
+                </fieldset>
+                <fieldset>
+                    <label>状态</label>
+                        <input id="status" name="status" 
+                        type="radio"  value="吃饭"> 吃饭
+                        <input id="status" name="status" 
+                        type="radio"  value="睡觉"> 睡觉
+                        <input id="status" name="status" 
+                        type="radio"  value="发呆"> 发呆
+                        <input id="status" name="status" 
+                        type="radio"  value="起床"> 起床
+                        <input id="status" name="status" 
+                        type="radio"  value="上课"> 上课
+                        <input id="status" name="status" 
+                        type="radio"  value="下课"> 下课
+                </fieldset>
+                <fieldset>
+                    <label>提醒</label>
+                <input id="free" name="free" 
+                type="radio" value="我有空哦～"> 我有空哦～                  
+                </fieldset>
+
+                <div style="width: 100%; display: block; float: right;">
+                    <button id="send" type="submit">
+                        Send
+                    </button>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript">
+            function postToGoogle() {
+                var user = $("input[type='radio'][name='user']:checked").val();
+                var status = $("input[type='radio'][name='status']:checked").val();
+                var free = $("input[type='radio'][name='free']:checked").val();
+ 
+                $.ajax({
+                    url: "https://docs.google.com/forms/d/10Xc6b8g4nJGXsqVbUstAXw60_iH_uGH9YPGV_Bz2QqI/formResponse",
+                   data: { "entry.39164430":user, 
+                    "entry.481507923":status, 
+                    "entry.1374707491":free},
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        0: function() {
+                           window.location.replace("www.google.html");
+                        },
+                        200: function() {
+                            window.location.replace("www.google.html");
+                        }
+                    }
+                });
+            }
+             
+            $(document).ready(function(){
+                $('#form').submit(function() {
+                    postToGoogle();
+                    return false;
+                });
+            });
+        </script>
+    </body>
+</html>
