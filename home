@@ -1,0 +1,53 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>How to style Google Forms - Step 7</title>
+
+
+</head>
+
+<body>
+
+<form action="https://docs.google.com/spreadsheets/d/1IT_ygTfEW5Qe9HDu4HBXKKo-iVDammLRl84dxDwO6j4/edit?usp=sharing" method="POST">
+
+<br>
+<div class="errorbox-good">
+<div class="ss-form-entry">
+<label for="entry_1" class="ss-q-title">How blue is the Sky?
+</label>
+<label for="entry_1" class="ss-q-help"></label>
+<input type="text" name="entry.1.single" value="" class="ss-q-short" id="entry_1"></div></div>
+<br> <div class="errorbox-good">
+<div class="ss-form-entry"><label for="entry_2" class="ss-q-title">How deep is the ocean?
+</label>
+<label for="entry_2" class="ss-q-help"></label>
+<input type="text" name="entry.2.single" value="" class="ss-q-short" id="entry_2"></div></div>
+<br> <div class="errorbox-good">
+<div class="ss-form-entry"><label for="entry_3" class="ss-q-title">How easy was this tutorial?
+</label>
+
+<label for="entry_3" class="ss-q-help"></label>
+<ul class="ss-choices"><li class="ss-choice-item"><input type="radio" name="entry.3.group" value="Very easy!" class="ss-form-input" id="group_3_1">
+<label class="ss-choice-label" for="group_3_1">Very easy!</label></li> <li class="ss-choice-item"><input type="radio" name="entry.3.group" value="Pretty easy" class="ss-form-input" id="group_3_2">
+<label class="ss-choice-label" for="group_3_2">Pretty easy</label></li> <li class="ss-choice-item"><input type="radio" name="entry.3.group" value="Not easy" class="ss-form-input" id="group_3_3">
+<label class="ss-choice-label" for="group_3_3">Not easy</label></li>
+</ul></div></div>
+<br>
+<p></p>
+<input type="hidden" name="pageNumber" value="0">
+<input type="hidden" name="backupCache" value="">
+<input type="submit" name="submit" value="Submit"></form>
+
+ <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2330094-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
