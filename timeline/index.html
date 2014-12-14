@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Save The Relationship Timeline</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+    <script type='text/javascript' src='js/tabletop1.3.4.js'></script>
+    <script type='text/javascript' src='js/sheetsee.js'></script>
+
+
+  </head>
+  <style>
+    #Pagination {border-top: 4px solid #CCF4FF; margin: 10px 0px; padding-top: 10px; display: inline-block;}
+    #Pagination a {cursor: pointer;}
+    .no-pag {color: #acacac; border: none;}
+    .no-pag:hover {color: #acacac;}
+    input {border: none; border-bottom: 1px solid #333;margin: 10px 0px; width: 200px; font-size: 16px; padding-bottom: 6px;}
+    .tHeader {padding: 8px; cursor: pointer; text-align: left;}
+    .photo {display: inline-block; float: left; width: 100px;}
+    #photogrid {overflow: auto;}
+  </style>
+
+<body>
+  <div class="container">
+    <h1>Save The Relationship</h1>
+
+
+    <div id="fullTable"></div>
+
+
+<script id="fullTable_template" type="text/html">
+  <table>
+    <tr>
+    <th class="tHeader">Timestamp</th>
+    <th class="tHeader">User</th>
+    <th class="tHeader">Status</th>
+    <th class="tHeader">Free</th></tr>
+      {{#rows}}
+        <tr><td>{{timestamp}}</td>
+        <td>{{user}}</td>
+        <td>{{status}}</td>
+        <td>{{free}}</td></tr>
+      {{/rows}}
+  </table>
+</script>
+
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    var URL = "1T2L8EEjSyyTIkHqLwyfCyjLHP_DuAruv28Lkxw7YxBI"
+    Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true, order:'Timestamp' } )
+  })
+
+  function showInfo(data) {
+    var tableOptions = {"data": data
+    , "pagination": 10, "tableDiv": "#fullTable", "filterDiv": "#fullTableFilter"}
+    Sheetsee.makeTable(tableOptions)
+    Sheetsee.initiateTableFilter(tableOptions)
+  }
+
+
+</script>
+
+</body>
+</html>
