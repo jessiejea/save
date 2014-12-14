@@ -33,13 +33,15 @@
 <script id="fullTable_template" type="text/html">
   <table>
     <tr>
-    <th class="tHeader">Timestamp</th>
-    <th class="tHeader">User</th>
-    <th class="tHeader">Status</th>
+    <th class="tHeader">时间</th>
+    <th class="tHeader">用户</th>
+    <th class="tHeader">状态</th>
+    <th class="tHeader">补充说明</th>    
       {{#rows}}
         <tr><td>{{timestamp}}</td>
         <td>{{user}}</td>
         <td>{{status}}</td>
+        <td>{{info}}</td>
       {{/rows}}
   </table>
 </script>
