@@ -54,8 +54,7 @@
                 <fieldset>
                     <label>补充说明</label>
                     <br>
-                    <input id="info" name="info"
-                    type="text">
+                    <input type="text" id="info" name="info">
                 </fieldset>
 
                 <div style="width: 100%; display: block; float: right;">
@@ -67,9 +66,9 @@
         </div>
         <script type="text/javascript">
             function postToGoogle() {
-                var user = $("input[type='radio'][name='user']:checked").val();
-                var status = $("input[type='radio'][name='status']:checked").val();
-                var info = $("input[type='text'][name='info']:checked").val();
+                var user = $('#user').val();
+                var status = $('#status').val();
+                var info = $('#info').val();
                 $.ajax({
                     url: "https://docs.google.com/forms/d/10Xc6b8g4nJGXsqVbUstAXw60_iH_uGH9YPGV_Bz2QqI/formResponse",
                    data: { "entry.39164430":user, 
