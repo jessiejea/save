@@ -66,8 +66,8 @@
         </div>
         <script type="text/javascript">
             function postToGoogle() {
-                var user = $('#user').val();
-                var status = $('#status').val();
+                var user = $("input[type='radio'][name='user']:checked").val();
+                var status = $("input[type='radio'][name='status']:checked").val();
                 var info = $('#info').val();
                 $.ajax({
                     url: "https://docs.google.com/forms/d/10Xc6b8g4nJGXsqVbUstAXw60_iH_uGH9YPGV_Bz2QqI/formResponse",
