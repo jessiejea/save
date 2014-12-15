@@ -3,80 +3,102 @@
     <head>
         <title>Save The Relationship</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="styles.css">
+
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- Personal customised css -->
+<link rel="stylesheet" href="style.css">
+
+
     </head>
-    <body>
-        <div>
-            <div>
-                <strong>Save The Relationship</strong>
-                <br>
-                <a href="timeline/index.html">Timeline</a>
-                <br>
-            </div>
+
+    <style type="text/css">
+
+    </style>
+
+<body class="metro" style="background:#30302F">
+    <div class="container">
+        <h1>Save The Relationship</h1>
+                <a class="btn btn-grey btn-block" style="color: white; height: 50px" role="button" href="timeline/index.html"><p class="text-center h4">Timeline</p></a>
+
             <form id="form" target="_self" onsubmit="" action="">
-                <div>
-                    <label>我是</label>
-                    <br>
-                    <input id="user" type="radio" value="Amanda" name="user"> Amanda    
-                    <input id="user" type="radio" value="Lok" name="user">Lok
-                </div>
-                <div>
-                    <label>状态</label>
-                    <br>
-                        <input id="status" name="status" 
-                        type="radio"  value="睡觉"> 睡觉
-                        <input id="status" name="status" 
-                        type="radio"  value="起床"> 起床
-                        <br>
-                        <input id="status" name="status" 
-                        type="radio"  value="冲凉中"> 冲凉中
-                        <input id="status" name="status" 
-                        type="radio"  value="做饭中"> 做饭中
-                        <input id="status" name="status" 
-                        type="radio"  value="游戏中"> 游戏中
-                        <input id="status" name="status" 
-                        type="radio"  value="作业中"> 作业中
-                        <br>
-                        <input id="status" name="status" 
-                        type="radio"  value="散步中"> 散步中
-                        <input id="status" name="status" 
-                        type="radio"  value="移动中"> 移动中
-                        <input id="status" name="status" 
-                        type="radio"  value="外出活动中"> 外出活动中
-                        <br>
-                        <input id="status" name="status" 
-                        type="radio"  value="上课中"> 上课中
-                        <input id="status" name="status" 
-                        type="radio"  value="Lunch Break"> Lunch Break
-
-                        <br>
-                </div>
-                <div>
-                    <label>comment</label>
-                    <br>
-                    <input type="text" id="info" name="info">
+                <h3 class="text-center"> 我是</h3>     
+                <div class="btn-group btn-group-justified" data-toggle="buttons" style="height: 100px;line-height:100px">  
+                    <label class="btn btn-red"><input id="user" type="radio" value="Amanda" name="user">
+                        <p class="h4">Amanda</p></label> 
+                    <label class="btn btn-blue"><input id="user" type="radio" value="Lok" name="user">
+                        <p class="h4">Lok</p></label>
                 </div>
 
-                <div style="width: 100%; display: block; float: right;">
-                    <button id="send" type="submit">
-                        Send
-                    </button>
+                <h3 class="text-center">状态</h3>
+                <div class="btn-toolbar" role="toolbar" aria-label="..." data-toggle="buttons" style="height: 250px"> 
+                <div class="btn-group btn-group-justified" role="group" aria-label="..."> 
+                    <label class="btn btn-green"> <input id="status" name="status" type="radio"  value="睡觉"> <p class="text-center h5">睡觉</p> </label>
+                    <label class="btn btn-green"><input id="status" name="status" type="radio"  value="起床"> <p class="text-center h5">起床 </p> </label>
                 </div>
+                <div class="btn-group btn-group-justified" role="group" aria-label="..."> 
+                    <label class="btn btn-green"><input id="status" name="status" type="radio"  value="冲凉中"><p class="text-center h5"> 冲凉中 </p></label>
+                    <label class="btn btn-green"><input id="status" name="status" type="radio"  value="做饭中"> <p class="text-center h5">做饭中</p></label>
+                    <label class="btn btn-green"><input id="status" name="status" type="radio"  value="游戏中"> <p class="text-center h5">游戏中</p></label>
+                    <label class="btn btn-green"><input id="status" name="status" type="radio"  value="作业中"> <p class="text-center h5">作业中</p></label>
+                </div>
+                <div class="btn-group btn-group-justified" role="group" aria-label="..."> 
+                    <label class="btn btn-green"><input id="status" name="status" type="radio"  value="散步中"> <p class="text-center h5">散步中</p></label>
+                    <label class="btn btn-green"><input id="status" name="status" type="radio"  value="移动中"> <p class="text-center h5">移动中</p></label>
+                    <label class="btn btn-green"><input id="status" name="status" type="radio"  value="外出活动中"> <p class="text-center h5">外出活动中</p></label>
+                </div>
+                <div class="btn-group btn-group-justified" role="group" aria-label="..."> 
+                    <label class="btn btn-green"><input id="status" name="status" type="radio"  value="上课中"> <p class="text-center h5">上课中</p></label>
+                    <label class="btn btn-green"><input id="status" name="status" type="radio"  value="Lunch Break"> <p class="text-center h5">Lunch Break</p></label>
+                </div>
+                <div class="btn-group btn-group-justified" role="group" aria-label="..."> 
+                    <label class="btn btn-green"><input id="status" name="status" type="radio"  value="想你"> <p class="text-center h5">想你</p></label>
+                    <label class="btn btn-green"><input id="status" name="status" type="radio"  value="亲一个"> <p class="text-center h5">亲一个</p></label>
+                </div>
+                </div>
+
+                <h3 class="text-center">空闲度</h3>
+                <div class="btn-toolbar" role="toolbar" aria-label="..." data-toggle="buttons" style="height: 50px"> 
+                <div class="btn-group btn-group-justified" role="group" aria-label="..."> 
+                        <label class="btn btn-yellow"><input id="ava" name="ava" 
+                        type="radio"  value="busy"> <p class="text-center h5">Busy </p></label>
+                        <label class="btn btn-yellow"><input id="ava" name="ava" 
+                       type="radio"  value="free"> <p class="text-center h5">Free </p></label>
+                </div>
+                </div>
+
+                <h3 class="text-center">详细说明</h3>
+                <input type="text" class="form-control" id="comment" name="comment">
+                <br>
+                    <div style="height: 100px">
+                    <input class="btn btn-block btn-grey2" id="send" type="submit">
+                    </div>
+
             </form>
-        </div>
+    </div>
 
 
         <script type="text/javascript">
             function postToGoogle() {
                 var user = $("input[type='radio'][name='user']:checked").val();
                 var status = $("input[type='radio'][name='status']:checked").val();
-                var info = $('#info').val();
+                var ava = $("input[type='radio'][name='ava']:checked").val();
+                var comment = $('#comment').val();
                 $.ajax({
                     url: "https://docs.google.com/forms/d/10Xc6b8g4nJGXsqVbUstAXw60_iH_uGH9YPGV_Bz2QqI/formResponse",
                    data: { "entry.39164430":user, 
-                    "entry.481507923":status, 
-                    "entry.87449680":info},
+                    "entry.481507923":status,
+                    "entry.1696492596":ava, 
+                    "entry.87449680":comment
+                    },
                     type: "POST",
                     dataType: "xml",
                     statusCode: {
@@ -97,5 +119,6 @@
                 });
             });
         </script>
+
     </body>
 </html>
