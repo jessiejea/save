@@ -25343,17 +25343,15 @@ function setPagClicks(data, tableId, currentPage, pagination, totalPages) {
 module.exports.setPreNext = setPreNext
 function  setPreNext(targetDiv, currentPage, currentPage, totalPages, data, pagination) {
   var tableId = targetDiv.slice(1)
-  $(targetDiv).append("<div id='Pagination' pageno='" + currentPage + "'" + "class='table-pagination'>Showing page "
-    + currentPage + " of " + totalPages + " <a class='pagination-pre-" + tableId + "'>Previous</a>" +
-    " <a class='pagination-next-" + tableId + "'>Next</a></p></div>" )
+  $(targetDiv).append("<div id='Pagination' pageno='" + currentPage + "'" + "class='table-pagination'> <a class='pagination-pre-" + tableId + " btn btn-grey btn-block' role='button'>Previous</a>" +
+    " <a class='pagination-next-" + tableId + " btn btn-block btn-grey' role='button'>Next</a></p></div>" )
 }
 
 module.exports.writePreNext = writePreNext
 function  writePreNext(targetDiv, currentPage, currentPage, totalPages, data, pagination) {
   var tableId = targetDiv.slice(1)
-  $(targetDiv).append("<div id='Pagination' pageno='" + currentPage + "'" + "class='table-pagination'>Showing page "
-    + currentPage + " of " + totalPages + " <a class='pagination-pre-" + tableId + "'>Previous</a>" +
-    " <a class='pagination-next-" + tableId + "'>Next</a></p></div>" )
+  $(targetDiv).append("<div id='Pagination' pageno='" + currentPage + "'" + "class='table-pagination'> <a class='pagination-pre-" + tableId + " btn  btn-grey btn-block' role='button'>Previous</a>" +
+    " <a class='pagination-next-" + tableId + " btn btn-block btn-grey' role='button'>Next</a></p></div>" )
   setPagClicks(data, tableId, currentPage, pagination, totalPages)
 }
 

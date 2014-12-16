@@ -144,7 +144,8 @@ input[type="radio"] {
 }
 
 .Amanda,.Lok
-{font-size: 16px;}
+{font-size: 16px;
+  text-align: center;}
 
 .Amanda {
 background-color: #F26964;}
